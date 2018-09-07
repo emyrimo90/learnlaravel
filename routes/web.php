@@ -113,11 +113,11 @@ Route::get('/kawa3b',function(){
 
         $client = new GuzzleHttp\Client();
 
-        $response = $client->request('POST', 'http://localhost/html/webservices/get_all_offer_list',[
+        $response = $client->request('POST', 'https://kawa3b.com/webservices/list_of_service_category',[
                  'form_params' =>[
                    'lang'=>'en',
-                   'email'=>'info@itroots.net',
-                   'password'=>123456
+                   'category'=>1,
+                   'type'=>1,
                  ]
                  ,
                 'headers'=>[
