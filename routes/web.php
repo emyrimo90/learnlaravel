@@ -26,7 +26,7 @@ Route::get('/',function(){
 
 Route::get('/kawa3b',function(){
   /*$client = new GuzzleHttp\Client();
-        $res = $client->post('http://kawa3b.com/webservices/list_of_service_category', [
+        $res = $client->post('https://kawa3b.com/webservices/list_of_service_category', [
                 'lang' => 'en',
                 //'secret' => 'test_secret',
         ]);
@@ -113,7 +113,7 @@ Route::get('/kawa3b',function(){
 
         $client = new GuzzleHttp\Client();
 
-        $response = $client->request('POST', 'http://localhost/html/webservices/login',[
+        $response = $client->request('POST', 'http://localhost/html/webservices/get_all_offer_list',[
                  'form_params' =>[
                    'lang'=>'en',
                    'email'=>'info@itroots.net',
@@ -225,3 +225,19 @@ Route::get('sessionArray', function(){
 });
 
 Route::get('/cookieArray', 'NewsController@cookieArray');
+
+Route::get('/angular', function(){
+  return view('angular');
+});
+Route::get('/courseTable', function(){
+  return view('courseTable');
+});
+
+Route::get('/courseList', function(){
+  return view('courseList');
+});
+
+Route::get('/angularRequest', function(){
+  return view('angularRequest');
+});
+
